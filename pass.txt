@@ -1,0 +1,3 @@
+username: 	aditya
+pass:		pass@123
+email:		aditya@email.com

@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class AboutView(TemplateView):
-    template_name = 'blog/about.html'
+    template_name = 'blog_app/about.html'
 
 
 class PostListView(ListView):
@@ -48,7 +48,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 
 class DraftListView(LoginRequiredMixin, ListView):
     login_url = '/login/'
-    redirect_field_name = 'blog/post_draft_list.html'
+    redirect_field_name = 'blog_app/post_draft_list.html'
     model = Post
 
     def get_queryset(self):
