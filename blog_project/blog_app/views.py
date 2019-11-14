@@ -28,14 +28,14 @@ class PostDetailView(DetailView):
 
 
 class PostCreateView(LoginRequiredMixin, CreateView):
-    login_url = '/login/'
+    login_url = '/accounts/login/'
     redirect_field_name = 'blog/post_detail.html'
     model = Post
     form_class = PostForm
 
 
 class PostUpdateView(LoginRequiredMixin, UpdateView):
-    login_url = '/login/'
+    login_url = '/accounts/login/'
     redirect_field_name = 'blog/post_detail.html'
     model = Post
     form_class = PostForm
@@ -47,7 +47,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 
 
 class DraftListView(LoginRequiredMixin, ListView):
-    login_url = '/login/'
+    login_url = '/accounts/login/'
     redirect_field_name = 'blog_app/post_draft_list.html'
     model = Post
 
